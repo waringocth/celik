@@ -63,16 +63,16 @@ export default function RootLayout({
   return (
     <html lang="tr" suppressHydrationWarning className={inter.variable}>
       <head>
-        {/* Google Tag Manager - DEDICATED SCRIPT SLOT */}
-        {/* <script
+        {/* Google Tag Manager */}
+        <script
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
             j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-XXXXXXX');`,
+            })(window,document,'script','dataLayer','GTM-W9WPP73X');`,
           }}
-        /> */}
+        />
 
         {/* Google Ads Conversion Tracking (gtag.js) */}
         {/* <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXX"></script>
@@ -90,8 +90,8 @@ export default function RootLayout({
       {/* pb-16 on mobile to clear the fixed bottom CTA bar; md:pb-0 on desktop */}
       <body className="antialiased pb-16 md:pb-0">
         {/* Google Tag Manager (noscript) */}
-        {/* <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
-        height="0" width="0" style={{ display: 'none', visibility: 'hidden' }}></iframe></noscript> */}
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W9WPP73X"
+        height="0" width="0" style={{ display: 'none', visibility: 'hidden' }}></iframe></noscript>
         <div className="sticky top-0 z-50 w-full flex flex-col">
           <EmergencyBanner />
           <Header />
