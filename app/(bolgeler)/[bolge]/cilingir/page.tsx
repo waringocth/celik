@@ -142,7 +142,7 @@ export default function BolgeCilingirPage({ params }: { params: { bolge: string 
 
           <div className="flex items-center justify-center gap-2 text-amber-400 font-bold bg-black/40 py-3 px-6 rounded-xl border border-white/5 w-fit mx-auto">
             <Clock size={20} />
-            ⚡ Ortalama 15 dakikada {region.name}&apos;ye ulaşıyoruz
+            ⚡ Ortalama 15 dakikada {region.name} bölgesine ulaşıyoruz
           </div>
         </div>
       </section>
@@ -192,7 +192,7 @@ export default function BolgeCilingirPage({ params }: { params: { bolge: string 
           <div className="w-16 h-16 rounded-2xl bg-primary/20 flex items-center justify-center mx-auto mb-6 text-primary">
             <Shield size={32} />
           </div>
-          <h2 className="text-3xl font-black text-white mb-6">Yıllardır {region.name}&apos;de Hizmet Veriyoruz</h2>
+          <h2 className="text-3xl font-black text-white mb-6">Yıllardır {region.name} Bölgesinde Hizmet Veriyoruz</h2>
           <p className="text-slate-400 text-lg leading-relaxed mb-8">
             {region.name} genelinde, özellikle {region.neighborhoods.slice(0, 3).join(", ")} gibi yoğun mahallelerde 7/24 acil kapı açma ve kilit değişimi hizmeti sunuyoruz. Uzman ekibimiz, en kısa sürede adresinize ulaşarak mağduriyetinizi giderir.
           </p>

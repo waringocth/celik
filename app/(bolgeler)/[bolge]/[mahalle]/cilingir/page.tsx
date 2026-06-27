@@ -128,7 +128,7 @@ export default function MahalleCilingirPage({ params }: { params: { bolge: strin
 
           <h1 className="text-3xl md:text-6xl font-black text-white mb-4 leading-tight tracking-tight">
             {mahalle} Çilingir <br />
-            <span className="text-primary">— {region.name}&apos;nin Kalbinde 7/24</span>
+            <span className="text-primary">— {region.name} Bölgesinin Kalbinde 7/24</span>
           </h1>
 
           <div className="grid grid-cols-2 gap-2 mt-3 mb-6 w-full max-w-lg mx-auto">
@@ -152,7 +152,7 @@ export default function MahalleCilingirPage({ params }: { params: { bolge: strin
 
           <div className="flex items-center justify-center gap-2 text-amber-400 font-bold bg-black/40 py-3 px-6 rounded-xl border border-white/5 w-fit mx-auto">
             <Clock size={20} />
-            ⚡ Ortalama 15 dakikada {mahalle}&apos;ye ulaşıyoruz
+            ⚡ Ortalama 15 dakikada {mahalle} konumuna ulaşıyoruz
           </div>
         </div>
       </section>

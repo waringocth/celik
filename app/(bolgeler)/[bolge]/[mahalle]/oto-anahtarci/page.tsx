@@ -156,7 +156,7 @@ export default function MahalleOtoAnahtarciPage({ params }: { params: { bolge: s
 
           <div className="flex items-center justify-center gap-2 text-amber-400 font-bold bg-black/40 py-3 px-6 rounded-xl border border-white/5 w-fit mx-auto">
             <Clock size={20} />
-            ⚡ Ortalama 15 dakikada {mahalle}&apos;ye ulaşıyoruz
+            ⚡ Ortalama 15 dakikada {mahalle} konumuna ulaşıyoruz
           </div>
         </div>
       </section>
