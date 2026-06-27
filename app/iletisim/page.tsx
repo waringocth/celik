@@ -47,7 +47,9 @@ export default function ContactPage() {
     const msg = encodeURIComponent(
       `Merhaba, benim adım ${formState.name}.\n${formState.message}\nTelefon: ${formState.phone}`
     );
-    window.open(`https://wa.me/905321234567?text=${msg}`, "_blank");
+    // In a real app, WHATSAPP_NUMBER can be imported from metadata.ts
+    // but we can just use the new number here directly.
+    window.open(`https://wa.me/905475450909?text=${msg}`, "_blank");
     setSent(true);
   };
 

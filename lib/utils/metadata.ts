@@ -92,8 +92,8 @@ export function generateDistrictMeta(district: string, neighborhood?: string, bo
   };
 }
 
-export const PHONE_NUMBER = "05321234567";
-export const PHONE_DISPLAY = "0532 123 45 67";
-export const WHATSAPP_NUMBER = "905321234567";
-export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=Merhaba,%20çilingir%20hizmetiniz%20hakkında%20bilgi%20almak%20istiyorum.`;
+export const PHONE_NUMBER = "05475450909";
+export const PHONE_DISPLAY = "0547 545 09 09";
+export const WHATSAPP_NUMBER = "905475450909";
+export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=Merhaba,%20acil%20%C3%A7ilingir%20hizmeti%20i%C3%A7in%20ula%C5%9F%C4%B1yorum.%20Konumuma%20usta%20y%C3%B6nlendirebilir%20misiniz%3F`;
 export const PHONE_URL = `tel:${PHONE_NUMBER}`;
