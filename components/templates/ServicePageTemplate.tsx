@@ -99,12 +99,12 @@ export default function ServicePageTemplate({
       />
 
       {/* 1. Hero Section */}
-      <section className="relative pt-32 pb-20 bg-background overflow-hidden">
+      <section className="relative pt-24 pb-8 md:pt-32 md:pb-16 bg-background overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/10 to-transparent pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
           
           {/* Breadcrumb */}
-          <nav className="flex items-center gap-2 text-sm text-slate-400 mb-8">
+          <nav className="flex items-center gap-2 text-sm text-slate-400 mb-4 md:mb-8">
             <Link href="/" className="hover:text-primary transition-colors">Ana Sayfa</Link>
             <ChevronRight size={14} />
             <span>Hizmetler</span>
@@ -112,31 +112,31 @@ export default function ServicePageTemplate({
             <span className="text-white">{title.split("—")[0].trim()}</span>
           </nav>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-              <div className="w-16 h-16 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6">
+              <div className="hidden md:flex w-16 h-16 rounded-2xl bg-primary/10 text-primary items-center justify-center mb-6">
                 {icon}
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-6 tracking-tight">
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-4 tracking-tight">
                 {title.split("—")[0]} <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-yellow-300">
                   — {title.split("—")[1]}
                 </span>
               </h1>
               
-              <div className="flex flex-wrap gap-3 mb-8">
+              <div className="grid grid-cols-2 gap-2 mt-3 mb-6 w-full max-w-lg">
                 {trustBadges.map((badge) => (
-                  <span key={badge} className="px-3 py-1 bg-surface border border-white/10 rounded-md text-sm font-medium text-slate-200">
+                  <div key={badge} className="flex items-center gap-1.5 bg-white/5 rounded-lg px-3 py-2 text-xs text-slate-300">
                     {badge}
-                  </span>
+                  </div>
                 ))}
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4">
-                <a href={PHONE_URL} className="flex items-center justify-center gap-2 px-6 py-3.5 bg-primary hover:bg-primary-dark text-black font-bold rounded-xl transition-all shadow-[0_0_20px_rgba(245,158,11,0.2)]">
-                  <Phone size={18} aria-hidden="true" /> Hemen Ara
+              <div className="flex flex-row gap-3 w-full mt-4">
+                <a href={PHONE_URL} className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-amber-500 hover:bg-amber-400 text-black font-medium rounded-xl text-sm transition-all shadow-[0_0_20px_rgba(245,158,11,0.2)]">
+                  <Phone size={16} aria-hidden="true" /> Hemen Ara
                 </a>
-                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 px-6 py-3.5 bg-[#25D366] hover:bg-[#1ebe59] text-white font-bold rounded-xl transition-all">
+                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-[#25D366] hover:bg-[#1ebe59] text-white font-medium rounded-xl text-sm transition-all">
                   <WhatsAppIcon /> WhatsApp
                 </a>
               </div>

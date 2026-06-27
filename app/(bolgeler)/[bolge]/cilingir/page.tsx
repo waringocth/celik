@@ -102,11 +102,11 @@ export default function BolgeCilingirPage({ params }: { params: { bolge: string 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
 
       {/* 1. HERO (Above Fold) */}
-      <section className="relative pt-32 pb-24 bg-background overflow-hidden flex flex-col items-center justify-center text-center min-h-[80vh]">
+      <section className="relative pt-24 pb-8 md:pt-28 md:pb-16 bg-background overflow-hidden flex flex-col items-center justify-center text-center">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,#f59e0b15,transparent_50%)] pointer-events-none" />
         
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6">
-          <nav className="flex items-center justify-center gap-2 text-sm font-medium text-slate-400 mb-8 overflow-x-auto whitespace-nowrap">
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 w-full">
+          <nav className="flex items-center justify-center gap-2 text-sm font-medium text-slate-400 mb-4 overflow-x-auto whitespace-nowrap">
             <Link href="/" className="hover:text-primary transition-colors">Ana Sayfa</Link>
             <span>/</span>
             <span className="text-slate-500">Bölgeler</span>
@@ -116,25 +116,25 @@ export default function BolgeCilingirPage({ params }: { params: { bolge: string 
             <span className="text-primary font-semibold">Çilingir</span>
           </nav>
 
-          <h1 className="text-4xl md:text-6xl font-black text-white mb-6 leading-tight tracking-tight">
+          <h1 className="text-3xl md:text-6xl font-black text-white mb-4 leading-tight tracking-tight">
             {region.name} Çilingir <br />
             <span className="text-primary">— 7/24 Acil Hizmet</span>
           </h1>
 
-          <div className="flex flex-wrap items-center justify-center gap-3 mb-10">
+          <div className="grid grid-cols-2 gap-2 mt-3 mb-6 w-full max-w-lg mx-auto">
             {trustBadges.map((badge) => (
-              <span key={badge} className="px-4 py-1.5 bg-surface border border-white/10 rounded-full text-sm font-bold text-slate-200 shadow-lg">
+              <div key={badge} className="flex items-center justify-center gap-1.5 bg-white/5 rounded-lg px-3 py-2 text-xs text-slate-300 font-medium border border-white/5">
                 {badge}
-              </span>
+              </div>
             ))}
           </div>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8 w-full max-w-2xl mx-auto">
-            <a href={PHONE_URL} className="flex-1 w-full flex items-center justify-center gap-3 px-8 py-5 bg-amber-500 hover:bg-amber-400 text-black font-black rounded-2xl text-xl transition-transform hover:scale-105 shadow-[0_0_30px_rgba(245,158,11,0.3)]">
-              <Phone size={24} className="animate-pulse" />
+          <div className="flex flex-row gap-3 w-full max-w-2xl mx-auto mt-4 mb-6">
+            <a href={PHONE_URL} className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-amber-500 hover:bg-amber-400 text-black font-medium rounded-xl text-sm transition-transform hover:scale-105 shadow-[0_0_20px_rgba(245,158,11,0.2)]">
+              <Phone size={16} className="animate-pulse" />
               Hemen Ara
             </a>
-            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="flex-1 w-full flex items-center justify-center gap-3 px-8 py-5 bg-[#25D366] hover:bg-[#1ebe59] text-white font-black rounded-2xl text-xl transition-transform hover:scale-105 shadow-[0_0_30px_rgba(37,211,102,0.2)]">
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-[#25D366] hover:bg-[#1ebe59] text-white font-medium rounded-xl text-sm transition-transform hover:scale-105 shadow-[0_0_20px_rgba(37,211,102,0.15)]">
               <WhatsAppIcon />
               WhatsApp
             </a>
