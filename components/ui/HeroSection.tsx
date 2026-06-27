@@ -26,7 +26,7 @@ const itemVariants: Variants = {
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-[90vh] md:min-h-screen flex items-center justify-center overflow-hidden bg-background pt-20">
+    <section className="relative min-h-[90vh] md:min-h-screen flex items-center justify-center overflow-x-clip bg-background pt-20 pb-12">
       {/* ── Background Gradients & Grid ── */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
@@ -39,7 +39,7 @@ export default function HeroSection() {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="flex-1 text-center md:text-left"
+          className="flex-1 text-center md:text-left pt-4 md:pt-0"
         >
           <motion.div variants={itemVariants} className="mb-4">
             <span className="inline-block py-1 px-3 rounded-full bg-primary/10 border border-primary/20 text-primary font-semibold text-sm tracking-wide">
@@ -51,7 +51,7 @@ export default function HeroSection() {
             variants={itemVariants}
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white leading-tight tracking-tight mb-6"
           >
-            Esenyurt Çilingir <br />
+            Çelik Çilingir <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-yellow-300">
               — 7/24 Kapınızda
             </span>

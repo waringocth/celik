@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Phone } from "lucide-react";
 import { PHONE_URL, WHATSAPP_URL } from "@/lib/utils/metadata";
@@ -76,6 +77,22 @@ function FloatButton({
 
 // ─── Main FloatingCTA ─────────────────────────────────────────────────────────
 export default function FloatingCTA() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > window.innerHeight * 0.8) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <>
       {/* ── Desktop: stacked floating buttons bottom-right ── */}
@@ -116,9 +133,9 @@ export default function FloatingCTA() {
 
       {/* ── Mobile: fixed full-width bottom bar ── */}
       <motion.div
-        initial={{ y: 80, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.6, type: "spring", stiffness: 260, damping: 24 }}
+        initial={{ y: 100, opacity: 0 }}
+        animate={{ y: isVisible ? 0 : 100, opacity: isVisible ? 1 : 0 }}
+        transition={{ duration: 0.3 }}
         className="md:hidden fixed bottom-0 left-0 right-0 z-50 flex border-t border-white/10 shadow-[0_-4px_24px_rgba(0,0,0,0.5)]"
         style={{ background: "rgba(10,11,15,0.97)" }}
       >
