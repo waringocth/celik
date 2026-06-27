@@ -34,21 +34,58 @@ const NAV_LINKS = [
     label: "Bölgeler",
     href: "#bolgeler",
     children: [
-      { label: "Esenyurt", href: "/esenyurt" },
-      { label: "Avcılar", href: "/avcilar" },
-      { label: "Beylikdüzü", href: "/beylikduzu" },
-      { label: "Büyükçekmece", href: "/buyukcekmecea" },
-      { label: "Bahçeşehir", href: "/bahcesehir" },
+      { 
+        label: "Esenyurt", 
+        subItems: [
+          { label: "Çilingir", href: "/esenyurt/cilingir" },
+          { label: "Oto Anahtarcı", href: "/esenyurt/oto-anahtarci" }
+        ]
+      },
+      { 
+        label: "Avcılar", 
+        subItems: [
+          { label: "Çilingir", href: "/avcilar/cilingir" },
+          { label: "Oto Anahtarcı", href: "/avcilar/oto-anahtarci" }
+        ]
+      },
+      { 
+        label: "Beylikdüzü", 
+        subItems: [
+          { label: "Çilingir", href: "/beylikduzu/cilingir" },
+          { label: "Oto Anahtarcı", href: "/beylikduzu/oto-anahtarci" }
+        ]
+      },
+      { 
+        label: "Büyükçekmece", 
+        subItems: [
+          { label: "Çilingir", href: "/buyukcekmecea/cilingir" },
+          { label: "Oto Anahtarcı", href: "/buyukcekmecea/oto-anahtarci" }
+        ]
+      },
+      { 
+        label: "Bahçeşehir", 
+        subItems: [
+          { label: "Çilingir", href: "/bahcesehir/cilingir" },
+          { label: "Oto Anahtarcı", href: "/bahcesehir/oto-anahtarci" }
+        ]
+      },
     ],
   },
+  { label: "Blog", href: "/blog" },
   { label: "İletişim", href: "/iletisim" },
 ];
 
 // ─── Dropdown menu ────────────────────────────────────────────────────────────
+type NavItemType = {
+  label: string;
+  href?: string;
+  subItems?: { label: string; href: string }[];
+};
+
 function DropdownMenu({
   items,
 }: {
-  items: { label: string; href: string }[];
+  items: NavItemType[];
 }) {
   return (
     <motion.ul
@@ -65,13 +102,30 @@ function DropdownMenu({
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: i * 0.04 }}
         >
-          <Link
-            href={item.href}
-            className="flex items-center gap-2 px-4 py-2.5 text-sm text-slate-300 hover:text-amber-400 hover:bg-white/5 transition-colors"
-          >
-            <span className="w-1 h-1 rounded-full bg-amber-500/60 shrink-0" />
-            {item.label}
-          </Link>
+          {item.subItems ? (
+            <div className="px-4 py-2 text-sm">
+              <div className="text-amber-400 font-bold mb-1 border-b border-white/10 pb-1">{item.label}</div>
+              <div className="flex flex-col gap-1 mt-1 pl-2 border-l border-amber-500/30">
+                {item.subItems.map((sub: { label: string; href: string }) => (
+                  <Link
+                    key={sub.href}
+                    href={sub.href}
+                    className="text-slate-300 hover:text-white hover:translate-x-1 transition-all py-1"
+                  >
+                    {sub.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          ) : (
+            <Link
+              href={item.href || "#"}
+              className="flex items-center gap-2 px-4 py-2.5 text-sm text-slate-300 hover:text-amber-400 hover:bg-white/5 transition-colors"
+            >
+              <span className="w-1 h-1 rounded-full bg-amber-500/60 shrink-0" />
+              {item.label}
+            </Link>
+          )}
         </motion.li>
       ))}
     </motion.ul>
@@ -266,15 +320,34 @@ export default function Header() {
                             transition={{ duration: 0.2 }}
                             className="overflow-hidden ml-3 mt-0.5 mb-1 border-l-2 border-amber-500/30 pl-3"
                           >
-                            {link.children.map((child) => (
-                              <Link
-                                key={child.href}
-                                href={child.href}
-                                onClick={() => setMobileOpen(false)}
-                                className="block py-2 text-sm text-slate-400 hover:text-amber-400 transition-colors"
-                              >
-                                {child.label}
-                              </Link>
+                            {link.children.map((child: NavItemType) => (
+                              <div key={child.label} className="mb-2">
+                                {child.subItems ? (
+                                  <>
+                                    <div className="text-amber-400 text-xs font-bold uppercase tracking-wider mb-1 mt-1 pl-1">{child.label}</div>
+                                    <div className="border-l-2 border-white/10 pl-3 space-y-1 ml-1 mb-2">
+                                      {child.subItems.map((sub: { label: string; href: string }) => (
+                                        <Link
+                                          key={sub.href}
+                                          href={sub.href}
+                                          onClick={() => setMobileOpen(false)}
+                                          className="block py-1.5 text-sm text-slate-400 hover:text-white transition-colors"
+                                        >
+                                          {sub.label}
+                                        </Link>
+                                      ))}
+                                    </div>
+                                  </>
+                                ) : (
+                                  <Link
+                                    href={child.href || "#"}
+                                    onClick={() => setMobileOpen(false)}
+                                    className="block py-2 text-sm text-slate-400 hover:text-amber-400 transition-colors"
+                                  >
+                                    {child.label}
+                                  </Link>
+                                )}
+                              </div>
                             ))}
                           </motion.div>
                         )}

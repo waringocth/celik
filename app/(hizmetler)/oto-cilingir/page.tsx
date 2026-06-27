@@ -3,14 +3,14 @@ import { Car } from "lucide-react";
 import ServicePageTemplate from "@/components/templates/ServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Esenyurt Oto Çilingir | Araç Kapısı Açma — Çelik Çilingir",
-  description: "Arabanızın kapısı mı kilitli kaldı? Esenyurt oto çilingir, kayıp oto anahtar, çipli anahtar kopyalama. Aracınıza zarar vermeden açıyoruz.",
+  title: "Oto Çilingir Hizmeti | Çelik Çilingir",
+  description: "Esenyurt, Avcılar, Beylikdüzü, Büyükçekmece ve Bahçeşehir'de oto çilingir, kayıp oto anahtar, çipli anahtar kopyalama. Aracınıza zarar vermeden açıyoruz.",
 };
 
 export default function OtoCilingirPage() {
   return (
     <ServicePageTemplate
-      title="Esenyurt Oto Çilingir — Araç Kapısı Açma"
+      title="Oto Çilingir Hizmeti — Araç Kapısı Açma"
       description="Anahtarı içinde unutulan veya tamamen kaybolan tüm marka ve model araçların kapılarını, özel oto çilingir maymuncukları (Lishi) kullanarak, çiziksiz ve hasarsız bir şekilde profesyonelce açıyoruz."
       icon={<Car size={32} />}
       features={[

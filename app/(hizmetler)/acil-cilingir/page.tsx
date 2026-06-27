@@ -4,15 +4,15 @@ import ServicePageTemplate from "@/components/templates/ServicePageTemplate";
 import { PHONE_URL, PHONE_DISPLAY } from "@/lib/utils/metadata";
 
 export const metadata: Metadata = {
-  title: "Esenyurt Acil Çilingir | 15 Dakikada Kapınızda",
-  description: "Esenyurt ve çevre bölgelerde acil çilingir mi lazım? 7/24 nöbetçi çilingir ekibimizle ortalama 15-20 dakikada adresinizdeyiz. Hemen arayın!",
+  title: "Acil Çilingir Hizmeti | Çelik Çilingir",
+  description: "Esenyurt, Avcılar, Beylikdüzü, Büyükçekmece ve Bahçeşehir'de acil çilingir mi lazım? 7/24 nöbetçi çilingir ekibimizle ortalama 15-20 dakikada adresinizdeyiz. Hemen arayın!",
 };
 
 export default function AcilCilingirPage() {
   return (
     <ServicePageTemplate
-      title="Esenyurt Acil Çilingir — 15 Dakikada Kapınızda"
-      description="Gecenin bir yarısı kapıda mı kaldınız? Ocağın üstünde yemek mi unuttunuz? Panik yapmayın! 7/24 aktif nöbetçi çilingir ağımızla Esenyurt, Avcılar ve Beylikdüzü bölgelerinde size en yakın ustamızı anında konumunuza yönlendiriyoruz."
+      title="Acil Çilingir Hizmeti — 15 Dakikada Kapınızda"
+      description="Gecenin bir yarısı kapıda mı kaldınız? Ocağın üstünde yemek mi unuttunuz? Panik yapmayın! 7/24 aktif nöbetçi çilingir ağımızla Esenyurt, Avcılar, Beylikdüzü, Büyükçekmece ve Bahçeşehir'de size en yakın ustamızı anında konumunuza yönlendiriyoruz."
       icon={<Zap size={32} />}
       features={[
         "Nöbetçi Çilingir",

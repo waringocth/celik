@@ -2,49 +2,41 @@ export const regions = [
   {
     slug: "esenyurt",
     name: "Esenyurt",
-    title: "Esenyurt Çilingir",
-    description: "Esenyurt'un her mahallesinde 7/24 çilingir hizmeti",
     neighborhoods: [
-      "Ardıçlı", "Cumhuriyet", "Fatih", "Güzelyurt", "Mehterçeşme",
-      "Mimarsinan", "Namık Kemal", "Pınar", "Talatpaşa", "Atatürk",
-      "Yenikent", "Kıraç", "Sultanmurat", "Akevler"
+      "Ardıçlı", "Cumhuriyet", "Fatih", "Güzelyurt", 
+      "Mehterçeşme", "Mimarsinan", "Namık Kemal", "Pınar",
+      "Talatpaşa", "Atatürk", "Yenikent", "Kıraç",
+      "Sultanmurat", "Akevler"
     ]
   },
   {
     slug: "avcilar",
-    name: "Avcılar", 
-    title: "Avcılar Çilingir",
-    description: "Avcılar'ın tüm mahallelerinde acil çilingir",
+    name: "Avcılar",
     neighborhoods: [
-      "Ambarlı", "Cihangir", "Denizköşkler", "Firuzköy", "Gümüşpala",
-      "Merkez", "Murat", "Tahtakale", "Üniversite"
+      "Ambarlı", "Cihangir", "Denizköşkler", "Firuzköy",
+      "Gümüşpala", "Merkez", "Murat", "Tahtakale", "Üniversite"
     ]
   },
   {
     slug: "beylikduzu",
     name: "Beylikdüzü",
-    title: "Beylikdüzü Çilingir",
-    description: "Beylikdüzü'nde hızlı ve güvenilir çilingir hizmeti",
     neighborhoods: [
-      "Adnan Kahveci", "Barış", "Büyükşehir", "Cumhuriyet", "Dereağzı",
-      "Güzelyurt", "Kavaklar", "Marmara", "Sahil", "Yakuplu"
+      "Adnan Kahveci", "Barış", "Büyükşehir", "Cumhuriyet",
+      "Dereağzı", "Güzelyurt", "Kavaklar", "Marmara",
+      "Sahil", "Yakuplu"
     ]
   },
   {
     slug: "buyukcekmecea",
     name: "Büyükçekmece",
-    title: "Büyükçekmece Çilingir",
-    description: "Büyükçekmece genelinde 7/24 çilingir",
     neighborhoods: [
-      "Alkent", "Bahçelievler", "Fatih", "Gürpınar", "Kıraç",
-      "Mimaroba", "Piri Mehmet Paşa", "Tepecik"
+      "Alkent", "Bahçelievler", "Fatih", "Gürpınar",
+      "Kıraç", "Mimaroba", "Piri Mehmet Paşa", "Tepecik"
     ]
   },
   {
     slug: "bahcesehir",
     name: "Bahçeşehir",
-    title: "Bahçeşehir Çilingir",
-    description: "Bahçeşehir'de profesyonel çilingir hizmeti",
     neighborhoods: [
       "Bahçeşehir 1. Kısım", "Bahçeşehir 2. Kısım"
     ]

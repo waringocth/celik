@@ -3,14 +3,14 @@ import { Vault } from "lucide-react";
 import ServicePageTemplate from "@/components/templates/ServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Esenyurt Kasa Açma | Çelik Kasa Çilingir — Çelik Çilingir",
-  description: "Şifresi unutulmuş veya anahtarı kaybolmuş çelik kasalarınızı uzman ekipmanlarla hasarsız açıyoruz. Esenyurt kasa çilingir hizmeti.",
+  title: "Kasa Açma Hizmeti | Çelik Çilingir",
+  description: "Şifresi unutulmuş veya anahtarı kaybolmuş çelik kasalarınızı uzman ekipmanlarla hasarsız açıyoruz. Esenyurt, Avcılar, Beylikdüzü, Büyükçekmece ve Bahçeşehir'de kasa çilingir hizmeti.",
 };
 
 export default function KasaAcmaPage() {
   return (
     <ServicePageTemplate
-      title="Esenyurt Kasa Açma Hizmeti"
+      title="Kasa Açma Hizmeti"
       description="Anahtarı kaybolan, şifresi unutulan veya elektronik mekanizması arızalanan ev ve ofis tipi çelik kasalarınızı, profesyonel aletlerle mekanizmaya zarar vermeden, büyük bir gizlilik ve güvenilirlik içinde açıyoruz."
       icon={<Vault size={32} />}
       features={[

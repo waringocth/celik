@@ -3,14 +3,14 @@ import { Lock } from "lucide-react";
 import ServicePageTemplate from "@/components/templates/ServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Esenyurt Kilit Değişimi | Güvenli & Hızlı — Çelik Çilingir",
-  description: "Esenyurt çelik kapı kilit değişimi, barel ve göbek değişimi. Yüksek güvenlikli tuzaklı ve alarmlı yeni nesil kilit montajı.",
+  title: "Kilit Değişimi Hizmeti | Çelik Çilingir",
+  description: "Esenyurt, Avcılar, Beylikdüzü, Büyükçekmece ve Bahçeşehir'de çelik kapı kilit değişimi, barel ve göbek değişimi. Yüksek güvenlikli tuzaklı ve alarmlı yeni nesil kilit montajı.",
 };
 
 export default function KilitDegisimiPage() {
   return (
     <ServicePageTemplate
-      title="Esenyurt Kilit Değişimi — Güvenli & Hızlı"
+      title="Kilit Değişimi Hizmeti — Güvenli & Hızlı"
       description="Eski, yıpranmış veya güvenliğinden şüphe duyduğunuz kilitlerinizi, yüksek güvenlikli, tuzaklı ve maymuncukla açılmayan yeni nesil kilitlerle değiştiriyoruz. Taşındığınız yeni evin veya ofisin kilitlerini değiştirmek, güvenliğiniz için atacağınız en önemli adımdır."
       icon={<Lock size={32} />}
       features={[

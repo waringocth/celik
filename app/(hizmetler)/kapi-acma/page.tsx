@@ -3,14 +3,14 @@ import { DoorOpen } from "lucide-react";
 import ServicePageTemplate from "@/components/templates/ServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Esenyurt Kapı Açma | 7/24 Acil Çilingir",
-  description: "Esenyurt ve çevre ilçelerde 7/24 kapı açma hizmeti. Kilitli kalan kapılarınızı hasarsız ve garantili şekilde 15 dakikada açıyoruz.",
+  title: "Kapı Açma Hizmeti | Çelik Çilingir",
+  description: "Esenyurt, Avcılar, Beylikdüzü, Büyükçekmece ve Bahçeşehir'de 7/24 kapı açma hizmeti. Kilitli kalan kapılarınızı hasarsız ve garantili şekilde 15 dakikada açıyoruz.",
 };
 
 export default function KapiAcmaPage() {
   return (
     <ServicePageTemplate
-      title="Esenyurt Kapı Açma — 7/24 Acil Çilingir"
+      title="Kapı Açma Hizmeti — 7/24 Acil Çilingir"
       description="Anahtarınızı mı unuttunuz veya kapınız mı kilitli kaldı? Profesyonel ekibimizle kapınıza ve kilidinize hiçbir zarar vermeden, özel maymuncuk sistemleriyle kapı açma hizmeti sunuyoruz. 7/24 gezici servis araçlarımızla ortalama 15-20 dakika içinde adresinizdeyiz."
       icon={<DoorOpen size={32} />}
       features={[
@@ -26,7 +26,7 @@ export default function KapiAcmaPage() {
         },
         {
           q: "Ne kadar sürede gelirsiniz?",
-          a: "Esenyurt, Avcılar, Beylikdüzü ve çevre ilçelere ortalama varış süremiz trafik durumuna bağlı olarak 15 ile 20 dakika arasındadır."
+          a: "Esenyurt, Avcılar, Beylikdüzü, Büyükçekmece ve Bahçeşehir'e ortalama varış süremiz trafik durumuna bağlı olarak 15 ile 20 dakika arasındadır."
         },
         {
           q: "Gece yarısı hizmet veriyor musunuz?",
