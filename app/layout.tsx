@@ -92,10 +92,11 @@ export default function RootLayout({
         {/* Google Tag Manager (noscript) */}
         {/* <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
         height="0" width="0" style={{ display: 'none', visibility: 'hidden' }}></iframe></noscript> */}
-
-        <EmergencyBanner />
-        <Header />
-        <main className="pt-16">{children}</main>
+        <div className="sticky top-0 z-50 w-full flex flex-col">
+          <EmergencyBanner />
+          <Header />
+        </div>
+        <main>{children}</main>
         <Footer />
         <FloatingCTA />
       </body>

@@ -26,7 +26,7 @@ const itemVariants: Variants = {
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-[90vh] md:min-h-screen flex items-center justify-center overflow-x-clip bg-background pt-20 pb-12">
+    <section className="relative min-h-[100svh] flex items-center justify-center overflow-x-clip bg-background pt-20 md:pt-0 pb-12">
       {/* ── Background Gradients & Grid ── */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
@@ -68,12 +68,12 @@ export default function HeroSection() {
           {/* ── Trust Badges ── */}
           <motion.div
             variants={itemVariants}
-            className="flex flex-wrap items-center justify-center md:justify-start gap-4 mb-10"
+            className="grid grid-cols-2 gap-2 w-full max-w-sm mx-auto md:mx-0 md:flex md:flex-wrap mb-10"
           >
             {trustBadges.map((badge) => (
               <span
                 key={badge}
-                className="px-3 py-1.5 bg-surface border border-white/5 rounded-lg text-sm font-semibold text-slate-200"
+                className="flex items-center gap-2 bg-white/5 md:bg-surface border border-white/5 rounded-lg px-3 py-2 text-xs md:text-sm font-semibold text-slate-300 md:text-slate-200"
               >
                 {badge}
               </span>
@@ -83,13 +83,13 @@ export default function HeroSection() {
           {/* ── CTA Buttons ── */}
           <motion.div
             variants={itemVariants}
-            className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4"
+            className="flex flex-row gap-3 w-full max-w-sm mx-auto md:mx-0 md:max-w-none"
           >
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               href={PHONE_URL}
-              className="w-full sm:w-auto flex items-center justify-center gap-2.5 px-8 py-4 bg-primary hover:bg-primary-dark text-black font-black rounded-xl text-lg transition-colors shadow-[0_0_30px_rgba(245,158,11,0.3)]"
+              className="flex-1 flex items-center justify-center gap-2 px-4 py-3 md:px-8 md:py-4 bg-primary hover:bg-primary-dark text-black font-black rounded-xl text-sm md:text-lg transition-colors shadow-[0_0_30px_rgba(245,158,11,0.3)]"
             >
               📞 Hemen Ara
             </motion.a>
@@ -99,9 +99,9 @@ export default function HeroSection() {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto flex items-center justify-center gap-2.5 px-8 py-4 bg-[#25D366] hover:bg-[#1ebe59] text-white font-black rounded-xl text-lg transition-colors shadow-[0_0_30px_rgba(37,211,102,0.2)]"
+              className="flex-1 flex items-center justify-center gap-2 px-4 py-3 md:px-8 md:py-4 bg-[#25D366] hover:bg-[#1ebe59] text-white font-black rounded-xl text-sm md:text-lg transition-colors shadow-[0_0_30px_rgba(37,211,102,0.2)]"
             >
-              💬 WhatsApp&apos;tan Yaz
+              💬 WhatsApp
             </motion.a>
           </motion.div>
         </motion.div>

@@ -106,7 +106,7 @@ export default function Header() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+        "w-full transition-all duration-300",
         scrolled
           ? "bg-black/85 backdrop-blur-md shadow-[0_2px_24px_rgba(0,0,0,0.5)] border-b border-white/[0.06]"
           : "bg-black/80 backdrop-blur-md"
